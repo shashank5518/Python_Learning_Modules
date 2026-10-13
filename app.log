@@ -1,0 +1,71 @@
+2026-07-16 14:54:31,529 | ERROR | Database Transaction Failed
+Traceback (most recent call last):
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 45, in get_connection
+    yield conn
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 58, in get_cursor
+    yield cur
+  File "d:\Python\finance_portfolio_tracker\repositories\user_repository.py", line 37, in exists_by_email
+    cur.execute("SELECT COUNT(*) FROM users WHERE email = %s", (email,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shash\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "users" does not exist
+LINE 1: SELECT COUNT(*) FROM users WHERE email = 'shashankg5518@gmai...
+                             ^
+
+2026-07-16 14:55:15,398 | ERROR | Database Transaction Failed
+Traceback (most recent call last):
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 45, in get_connection
+    yield conn
+  File "d:\Python\finance_portfolio_tracker\repositories\user_repository.py", line 45, in create
+    cur.execute(
+    ~~~~~~~~~~~^
+        "INSERT INTO users VALUES (%s, %s, %s) RETURNING *",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        (user_data.name, user_data.email, user_data.password_hash),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shash\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "Shashank Garg"
+LINE 1: INSERT INTO users VALUES ('Shashank Garg', 'shashankg5518@gm...
+                                  ^
+
+2026-07-16 14:58:58,003 | INFO | User created: id = 1, email = shashankg5518@gmail.com
+2026-07-16 15:00:47,748 | INFO | User Updated: id = 1 name = Shashank
+2026-07-16 15:01:16,300 | INFO | User Updated: id = 1 name = Shashank
+2026-07-16 15:01:16,302 | INFO | User delete: id = 1 success = True
+2026-07-16 16:58:08,190 | INFO | User created: id = 2, email = shashankg5518@gmail.com
+2026-07-16 16:58:08,196 | INFO | User delete: id = 1 success = False
+2026-07-17 00:22:35,658 | ERROR | Database Transaction Failed
+Traceback (most recent call last):
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 45, in get_connection
+    yield conn
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 58, in get_cursor
+    yield cur
+  File "d:\Python\finance_portfolio_tracker\repositories\bank_account_repository.py", line 38, in create
+    cur.execute("INSERT INTO bankaccount(user_id, bank_name, account_name, account_number, opening_balance, currency) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *",
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                (account_data.user_id, account_data.bank_name, account_data.account_name, account_data.account_number, account_data.opening_balance, account_data.currency))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shash\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "opening_balance" of relation "bankaccount" does not exist
+LINE 1: ...user_id, bank_name, account_name, account_number, opening_ba...
+                                                             ^
+
+2026-07-17 00:23:42,653 | ERROR | Database Transaction Failed
+Traceback (most recent call last):
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 45, in get_connection
+    yield conn
+  File "d:\Python\finance_portfolio_tracker\config\database_connection.py", line 58, in get_cursor
+    yield cur
+  File "d:\Python\finance_portfolio_tracker\repositories\bank_account_repository.py", line 39, in create
+    (account_data.user_id, account_data.bank_name, account_data.account_name, account_data.account_number, account_data.opening_balance, account_data.currency))
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BankAccountCreate' object has no attribute 'opening_balance'
+2026-07-17 00:24:11,211 | INFO | Account created: number = 3060408363

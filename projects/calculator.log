@@ -1,0 +1,29 @@
+INFO | 2026-07-01 19:56:46,763 | Starting Calculation: 23.0 ** 0.0
+INFO | 2026-07-01 19:56:46,764 | Result: 1.0
+INFO | 2026-07-01 19:56:46,764 | Calculation Completed: 23.0 ** 0.0
+INFO | 2026-07-01 19:56:46,764 | 23.0 ** 0.0 was logged
+INFO | 2026-07-01 19:56:53,566 | Starting Calculation: 23.0 / 45.0
+INFO | 2026-07-01 19:56:53,566 | Result: 0.5111111111111111
+INFO | 2026-07-01 19:56:53,566 | Calculation Completed: 23.0 / 45.0
+INFO | 2026-07-01 19:56:53,566 | 23.0 / 45.0 was logged
+INFO | 2026-07-01 19:57:00,549 | Starting Calculation: 23.0 // 0.0
+ERROR | 2026-07-01 19:57:00,550 | Calculation Failed: 23.0 // 0.0
+Traceback (most recent call last):
+  File "d:\Python\projects\_3_inter_calculator.py", line 46, in calc_logger
+    yield log_result
+  File "d:\Python\projects\_3_inter_calculator.py", line 75, in <module>
+    result = operations[operator](calc, a, b)
+  File "d:\Python\projects\_3_inter_calculator.py", line 28, in floor
+    raise ZeroDivisionError("Cannot Divide by Zero !!")
+ZeroDivisionError: Cannot Divide by Zero !!
+INFO | 2026-07-01 19:57:00,562 | 23.0 // 0.0 was logged
+INFO | 2026-07-01 19:57:30,112 | Starting Calculation: 23.0 - 2342341.0
+INFO | 2026-07-01 19:57:30,112 | Result: -2342318.0
+INFO | 2026-07-01 19:57:30,113 | Calculation Completed: 23.0 - 2342341.0
+INFO | 2026-07-01 19:57:30,113 | 23.0 - 2342341.0 was logged 
+
+INFO | 2026-07-01 19:57:45,128 | Starting Calculation: 24.0 + 69.0
+INFO | 2026-07-01 19:57:45,128 | Result: 93.0
+INFO | 2026-07-01 19:57:45,129 | Calculation Completed: 24.0 + 69.0
+INFO | 2026-07-01 19:57:45,129 | 24.0 + 69.0 was logged 
+

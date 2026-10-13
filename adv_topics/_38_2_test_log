@@ -1,0 +1,12 @@
+DEBUG:root:Addition: 10 + 5 = 15
+DEBUG:root:Subtraction: 10 - 5 = 5
+DEBUG:root:Multiplication: 10 * 5 = 50
+DEBUG:root:Division: 10 / 5 = 2
+DEBUG:root:Addition: 20 + 10 = 30
+DEBUG:root:Subtraction: 20 - 10 = 10
+DEBUG:root:Multiplication: 20 * 10 = 200
+DEBUG:root:Division: 20 / 10 = 2
+2026-07-01 00:14:55,968:DEBUG:Addition: 20 + 10 = 30
+2026-07-01 00:14:55,969:DEBUG:Subtraction: 20 - 10 = 10
+2026-07-01 00:14:55,969:DEBUG:Multiplication: 20 * 10 = 200
+2026-07-01 00:14:55,969:DEBUG:Division: 20 / 10 = 2

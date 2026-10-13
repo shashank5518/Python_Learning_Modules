@@ -1,0 +1,28 @@
+2026-07-01 00:44:44,424:__main__:Addition: 20 + 10 = 30
+2026-07-01 00:44:44,425:__main__:Subtraction: 20 - 10 = 10
+2026-07-01 00:44:44,425:__main__:Multiplication: 20 * 10 = 200
+2026-07-01 00:44:44,425:__main__:Division: 20 / 10 = 2
+2026-07-01 00:44:59,952:__main__:Addition: 20 + 10 = 30
+2026-07-01 00:44:59,953:__main__:Subtraction: 20 - 10 = 10
+2026-07-01 00:44:59,953:__main__:Multiplication: 20 * 10 = 200
+2026-07-01 00:44:59,953:__main__:Division: 20 / 10 = 2
+2026-07-01 00:48:15,653:__main__:Tried Dividing By Zero
+2026-07-01 00:48:33,899:__main__:Tried Dividing By Zero
+2026-07-01 00:49:14,681:__main__:Tried Dividing By Zero
+Traceback (most recent call last):
+  File "d:\Python\adv_topics\_39_3_logging_import.py", line 41, in divide
+    result = x/y
+             ~^~
+ZeroDivisionError: division by zero
+2026-07-01 00:50:24,605:__main__:Tried Dividing By Zero
+Traceback (most recent call last):
+  File "d:\Python\adv_topics\_39_3_logging_import.py", line 44, in divide
+    result = x/y
+             ~^~
+ZeroDivisionError: division by zero
+2026-07-01 00:51:05,760:__main__:Tried Dividing By Zero
+Traceback (most recent call last):
+  File "d:\Python\adv_topics\_39_3_logging_import.py", line 45, in divide
+    result = x/y
+             ~^~
+ZeroDivisionError: division by zero
